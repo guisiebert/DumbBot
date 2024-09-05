@@ -225,6 +225,7 @@ export default function Chat() {
               value={newMessage}
               className="bg-input p-3 py-6"
               data-cy="msg-input"
+              required
             />
             <Button
               type="submit"
