@@ -64,6 +64,7 @@ export default function Chat() {
         author: "USER",
         content: newMessage,
         sessionId: session?.id!,
+        createdAt: new Date(),
       },
     ]);
 
@@ -145,11 +146,11 @@ export default function Chat() {
                         >
                           {msg.content}
                         </p>
-                        <small className="text-xs text-muted">
-                          {msg.createdAt.toLocaleTimeString()}
-                        </small>
                       </div>
                     </div>
+                    <small className="text-xs text-muted">
+                      {msg.createdAt!.toLocaleTimeString()}
+                    </small>
                   </div>
                 ) : (
                   <div className="flex flex-col items-end space-y-1">
@@ -164,15 +165,15 @@ export default function Chat() {
                         >
                           {msg.content}
                         </p>
-                        <small className="text-xs text-muted">
-                          {msg.createdAt.toLocaleTimeString()}
-                        </small>
                       </div>
 
                       <div className="flex size-9 items-center justify-center rounded bg-secondary text-foreground">
                         <User2Icon />
                       </div>
                     </div>
+                    <small className="text-xs text-muted">
+                      {msg.createdAt!.toLocaleTimeString()}
+                    </small>
                   </div>
                 ),
               )}
