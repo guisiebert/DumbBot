@@ -93,9 +93,11 @@ export default function Chat() {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center">
         <div className="flex h-[36rem] w-[30rem] flex-col gap-4 rounded-lg bg-card p-6">
-          <header className="flex w-full items-center gap-2">
-            <BotIcon strokeWidth={3} className="size-10 text-accent" />
-            <h2 className="text-lg font-bold">DumbBot</h2>
+          <header className="flex w-full">
+            <Link href={"/"} className="flex items-center gap-2">
+              <BotIcon strokeWidth={3} className="size-10 text-accent" />
+              <h2 className="text-lg font-bold">DumbBot</h2>
+            </Link>
             <Link href={"/"} className="ml-auto">
               <XIcon strokeWidth={4} className="text-foreground" />
             </Link>

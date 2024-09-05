@@ -9,8 +9,7 @@ const sessionSchema = z.object({
 const messageSchema = z.object({
   id: z.number().optional(),
   content: z.string(),
-  // author: z.enum(["USER", "BOT"]),
-  author: z.string(), // GUI: you sure?
+  author: z.string(),
   createdAt: z.date().optional().default(new Date()),
 });
 
