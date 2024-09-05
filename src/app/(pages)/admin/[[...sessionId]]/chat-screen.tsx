@@ -32,7 +32,7 @@ export function ChatScreen({
       )}
 
       {messages.length > 0 && (
-        <div className="flex h-full flex-col gap-4 overflow-y-scroll rounded-lg bg-white px-6 py-4">
+        <div className="flex h-full flex-col gap-4 overflow-y-scroll rounded-lg border bg-white px-6 py-4">
           <div className="h-full flex-col justify-end">
             {messages &&
               messages.map((msg) =>

@@ -148,9 +148,11 @@ export default function Chat() {
                         </p>
                       </div>
                     </div>
-                    <small className="text-xs text-muted">
-                      {msg.createdAt!.toLocaleTimeString()}
-                    </small>
+                    {msg.createdAt && (
+                      <small className="text-xs text-muted">
+                        {msg.createdAt.toLocaleTimeString()}
+                      </small>
+                    )}
                   </div>
                 ) : (
                   <div className="flex flex-col items-end space-y-1">
@@ -171,9 +173,11 @@ export default function Chat() {
                         <User2Icon />
                       </div>
                     </div>
-                    <small className="text-xs text-muted">
-                      {msg.createdAt!.toLocaleTimeString()}
-                    </small>
+                    {msg.createdAt && (
+                      <small className="text-xs text-muted">
+                        {msg.createdAt.toLocaleTimeString()}
+                      </small>
+                    )}
                   </div>
                 ),
               )}
