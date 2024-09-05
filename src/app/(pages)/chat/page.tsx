@@ -164,6 +164,7 @@ export default function Chat() {
                         <p
                           key={msg.id}
                           className="mr-auto max-w-80 rounded bg-accent p-2 text-left text-sm font-light text-foreground"
+                          data-cy="first-user-message"
                         >
                           {msg.content}
                         </p>
@@ -221,8 +222,14 @@ export default function Chat() {
               onChange={(e) => setNewMessage(e.target.value)}
               value={newMessage}
               className="bg-input p-3 py-6"
+              data-cy="msg-input"
             />
-            <Button type="submit" variant={"secondary"} className="h-full">
+            <Button
+              type="submit"
+              variant={"secondary"}
+              className="h-full"
+              data-cy="msg-send"
+            >
               <SendHorizontalIcon strokeWidth={2.5} />
             </Button>
           </form>

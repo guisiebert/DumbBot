@@ -41,7 +41,9 @@ export function NewChat() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="min-h-12 w-full text-base">Start new chat</Button>
+        <Button data-cy="new-chat-dialog" className="min-h-12 w-full text-base">
+          Start new chat
+        </Button>
       </DialogTrigger>
       <DialogContent className="flex max-w-[400px] flex-col items-center bg-card">
         <Image
@@ -69,12 +71,18 @@ export function NewChat() {
         >
           <Input
             id="name"
+            data-cy="name-input"
             placeholder="Your name"
             autoComplete="off"
             onChange={(e) => setUsername(e.target.value)}
             required
           />
-          <Button variant={"secondary"} type="submit" className="h-13">
+          <Button
+            data-cy="start-chat-button"
+            variant={"secondary"}
+            type="submit"
+            className="h-13"
+          >
             <SendHorizontal strokeWidth={2.5} />
           </Button>
         </form>
