@@ -47,11 +47,15 @@ DumbBot is a simple chatbot application built for a take-home coding challenge. 
      npm run db:push
      ```
 
+**Note:** For simplicity, this project uses SQLite for the database. You don't need to set up a separate database server. The database file will be created automatically in the `./prisma/` directory when you run the development server.
+
 5. **Running the App:**
+
    - Start the development server: `npm run dev`
    - Open your browser and visit `http://localhost:3000`
 
-**Note:** For simplicity, this project uses SQLite for the database. You don't need to set up a separate database server. The database file will be created automatically in the `./prisma/` directory when you run the development server.
+6. **Running E2E tests**
+   - Run cypress: `npx cypress open`
 
 ## Author
 
