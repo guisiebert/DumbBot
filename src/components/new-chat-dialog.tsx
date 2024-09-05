@@ -32,12 +32,6 @@ export function NewChat() {
   });
   const [username, setUsername] = useState("");
 
-  function handleStart() {
-    newSession.mutate({
-      username,
-    });
-  }
-
   return (
     <Dialog>
       <DialogTrigger asChild>
